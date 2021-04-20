@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+:root {
+  --font-p: 1.3em;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: var(--font-p);
+  margin: 0;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root-container {
+  width: 580px;
+  overflow: hidden;
+  border-radius: 1%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.quiz-question {
+  padding: 10%;
+}
+
+.upper-progress-bar {
+  background-color: gray;
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 20px;
+}
+.lower-progress-info {
+  display: flex;
+  justify-content: space-between;
+}
+.lower-progress-bar {
+  border: 2px black solid;
+  height: 45px;
+  border-radius: 10px;
+  position: relative;
+  display: block;
+}
+.lower-progress-score,
+.lower-progress-min-score,
+.lower-progress-max-score {
+  position: absolute;
+  display: inline-block;
+  height: 41px;
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 8px;
+}
+
+.lower-progress-score {
+  z-index: 1;
+  background-color: rgb(126, 126, 126);
+}
+
+.lower-progress-max-score {
+  z-index: 0;
+  background-color: rgb(201, 201, 201);
+}
+
+.lower-progress-min-score {
+  z-index: 2;
+  background-color: black;
+}
+
+.quiz-question-type {
+  opacity: 60%;
+}
+
+
+.quiz-question-answer-btns {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.quiz-question-answer-btn {
+  border: none;
+  padding: 1vw;
+  background-color: rgb(126, 126, 126);
+  color: white;
+  width: 49%;
+  margin-bottom: 1px;
+  font-size: 1.1em;
+}
+
+.quiz-question-answer-btn-wrong {
+  background-color:rgb(255, 100, 100);
+}
+.quiz-question-answer-btn:hover {
+ opacity: 0.8;
+}
+.quiz-progress-info {
+  padding: 10%;
+}
+.result-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 4%;
+  height: 70px;
+}
+
+.next-question-btn {
+  border: none;
+  padding: 12px;
+  width: 33%;
+  color: white;
+  background-color: rgb(126, 126, 126);
+  border-radius: 4px;
+}
